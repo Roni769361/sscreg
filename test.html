@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSC_2023_Testimonial!</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.maateen.me/kalpurush/font.css" rel="stylesheet" />
+
+    <style>
+      @import url("https://fonts.maateen.me/kalpurush/font.css");
+
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .btn {
+        border: 1px solid green;
+      }
+      footer {
+        position: fixed;
+        bottom: 12px;
+        left: 0;
+        width: 100%;
+        height: 60px; /* Set the height of your footer */
+        background-color: #27374d; /* Set the desired background color */
+        padding: 2px;
+        box-sizing: border-box;
+        text-align: center;
+        color: white;
+      }
+      /* Additional body styles */
+
+      /* Add your custom CSS styles here */
+      label[for="checkbox"] {
+        font-weight: bold;
+      }
+
+      #checkbox {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 2px;
+        border: 1px solid #ccc;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        vertical-align: middle;
+        position: relative;
+        top: 1px;
+      }
+
+      #checkbox:checked::before {
+        content: "✔";
+        display: inline-block;
+        font-size: 16px;
+        color: #2196f3;
+        position: absolute;
+        top: 2px;
+        left: 5px;
+      }
+
+      #checkbox:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px #ccc;
+      }
+
+      p {
+        background-color: #8bc34a;
+        color: #ffffff;
+        font-size: 18px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <section
+      id="HomePart"
+      style="background-color: #9db2bf; padding-bottom: 10px; padding-top: 50px"
+    >
+      <div class="container" style="text-align: center">
+        <h1 style="font-weight: 800; color: #fffaf4">
+          Chakaria Korak Biddyapith
+        </h1>
+        <address style="color: #dde6ed">Chakaria, Coxs' Bazar</address>
+        <h3 style="color: #ffe194">
+          S.S.C Registration
+          <span style="font-family: 'Kalpurush', sans-serif"
+            >এর জন্য সম্পূর্ণ ফরমটি ইংরেজি বড় অক্ষরে পূরণ করতে হবে</span
+          >
+        </h3>
+      </div>
+    </section>
+    <section id="form">
+      <div class="container" style="padding-top: 50px">
+        <form class="row g-3" id="myForm" onsubmit="handleSubmit(event)">
+          <h5 style="border-bottom: 0.3px solid rgb(51, 51, 51)">
+            JSC Information
+          </h5>
+          <div class="form-group col-md-4">
+            <label for="Board">Board</label>
+            <select id="board" class="form-control" required>
+              <option value="">Select Board</option>
+              <option value="Chittagong">Chittagong</option>
+              <option value="Cumilla">Cumilla</option>
+              <option value="Dhaka">Dhaka</option>
+              <option value="Dinajpur">Dinajpur</option>
+              <option value="Jessore">Jessore</option>
+              <option value="Mymensingh">Mymensingh</option>
+              <option value="Rajshahi">Rajshahi</option>
+              <option value="Sylhet">Sylhet</option>
+              <option value="Madrasah">Madrasah</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="pyear">Passing Year</label>
+            <select id="pyear" class="form-control" required>
+              <option value="">Select Passing Year</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="roll" class="form-label">JSC Roll</label>
+            <input
+              type="tel"
+              class="form-control"
+              placeholder="SSC Roll No."
+              id="roll"
+              pattern="[0-9]{6}"
+              required
+            />
+          </div>
+          <div class="col-md-2">
+            <label for="reg" class="form-label">JSC Registration</label>
+            <input
+              type="tel"
+              class="form-control"
+              placeholder="SSC Registration No."
+              id="reg"
+              pattern="[0-9]{10}"
+              required
+            />
+          </div>
+          <div class="form-group col-md-2">
+            <label for="religion">Religion</label>
+            <select id="religion" class="form-control" required>
+              <option value="">Select Religion</option>
+              <option value="Hindus">Hindus</option>
+              <option value="Islam">Islam</option>
+              <option value="Buddhists">Buddhists</option>
+              <option value="Christians">Christians</option>
+            </select>
+          </div>
+          <h5 style="border-bottom: 0.3px solid rgb(51, 51, 51)">
+            Student Information
+          </h5>
+          <div class="col-md-12">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Full Name"
+              id="name"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="stID" class="form-label">Student ID</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Student ID"
+              id="stID"
+              required
+            />
+          </div>
+          <div class="col-md-2">
+            <label for="cRoll" class="form-label">Class Roll</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Class Roll"
+              id="cRoll"
+              required
+            />
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="section">Section</label>
+            <select id="section" class="form-control" required>
+              <option value="">Select Section</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="gender">Gender</label>
+            <select id="gender" class="form-control" required>
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+
+          <div class="col-md-2">
+            <label for="bDate" class="form-label">Birth Date</label>
+            <input
+              type="date"
+              class="form-control"
+              placeholder="Birth Date"
+              id="date"
+              required
+            />
+          </div>
+          <div class="col-md-12">
+            <label for="breg" class="form-label">Birth Registration No.</label>
+            <input
+              type="tel"
+              class="form-control"
+              placeholder="Birth Registration No."
+              id="breg"
+              pattern="[0-9]{17}"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="father" class="form-label">Father's Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="father"
+              placeholder="Father's Name"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="fNid" class="form-label">Father's NID No.</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Father's NID No."
+              id="fNid"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="mother" class="form-label">Mother's Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="mother"
+              placeholder="Mother's Name"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="mNid" class="form-label">Mother's NID No.</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Mother's NID No."
+              id="mNid"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="address" class="form-label">Village</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Only Village Name"
+              id="village"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="Post" class="form-label">Post Office</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Only Post Office Name"
+              id="post"
+              required
+            />
+          </div>
+          <div class="col-md-2">
+            <label for="postCode" class="form-label">Post Code</label>
+            <input
+              type="number"
+              placeholder="Post Code"
+              class="form-control"
+              id="postcode"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="policeStation" class="form-label">Police Station</label>
+            <input
+              type="text"
+              placeholder="Police Station"
+              class="form-control"
+              id="police"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="Dist" class="form-label">District</label>
+            <input
+              type="text"
+              placeholder="District Name"
+              class="form-control"
+              id="dist"
+              required
+            />
+          </div>
+          <div class="col-md-12">
+            <label for="Phone" class="form-label">Phone No.</label>
+            <input
+              type="tel"
+              id="phone"
+              class="form-control"
+              name="mobile"
+              pattern="[0-9]{11}"
+              placeholder="Valid Mobile No."
+              required
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="group">Group</label>
+            <select required id="group" class="form-control">
+              <option value="">Select Group</option>
+              <option value="Science">Science</option>
+              <option value="Business Studies">Business Studies</option>
+              <option value="Humanities">Humanities</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="optionalSubject">Optional Subject</label>
+            <select required id="option" class="form-control">
+              <option value="">Select Optional Subject</option>
+              <option value="Higher Mathematics">
+                Higher Mathematics (126)
+              </option>
+              <option value="Biology">Biology (138)</option>
+              <option value="Agricultural">Agricultural (134)</option>
+            </select>
+          </div>
+
+          <div id="output"></div>
+          <br />
+          <label for="checkbox"
+            >উপরোক্ত সকল তথ্য সঠিক এবং ভুল তথ্য প্রদানে একাডেমিক বিভিন্ন
+            কাগজপত্রে ভুল তথ্য প্রদর্শন হবে জেনে মর্মে আমি সমস্থ তথ্য সাবমিট
+            করিলাম:</label
+          >
+          <input type="checkbox" id="checkbox" name="checkbox" required />
+          <div class="btnHear" style="padding-bottom: 100px">
+            <button class="btn">Submit</button>
+            <a
+              class="btn"
+              href="https://roni769361.github.io/sscreg/Download_Form.html"
+              target="_blank"
+              >Download Application Copy</a
+            >
+            <!-- <button class="btn">Download</button> -->
+          </div>
+        </form>
+      </div>
+    </section>
+    <div class="container">
+      <footer>
+        <div class="">
+          <p style="background-color: #27374d; font-size: 13px">
+            &copy; 2023 Chakaria Korak Biddyapith. All rights reserved. <br />
+            Design and development by:
+            <span
+              ><a
+                style="color: #b0daff"
+                href="https://www.facebook.com/OnlineStoreHear/"
+                >Roni Kanti Nath</a
+              >
+            </span>
+          </p>
+        </div>
+      </footer>
+      <div class="container"></div>
+    </div>
+
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        // var now = new Date();
+        // var date = now.toLocaleString();
+
+        var form = {
+          date: date,
+          board: document.getElementById("board").value,
+          pyear: document.getElementById("pyear").value,
+          roll: document.getElementById("roll").value,
+          reg: document.getElementById("reg").value,
+          religion: document.getElementById("religion").value,
+          name: document.getElementById("name").value,
+          stID: document.getElementById("stID").value,
+          cRoll: document.getElementById("cRoll").value,
+          section: document.getElementById("section").value,
+          gender: document.getElementById("gender").value,
+          date: document.getElementById("date").value,
+          breg: document.getElementById("breg").value,
+          father: document.getElementById("father").value,
+          fNid: document.getElementById("fNid").value,
+          mother: document.getElementById("mother").value,
+          mNid: document.getElementById("mNid").value,
+          village: document.getElementById("village").value,
+          post: document.getElementById("post").value,
+          postcode: document.getElementById("postcode").value,
+          police: document.getElementById("police").value,
+          dist: document.getElementById("dist").value,
+          phone: document.getElementById("phone").value,
+          group: document.getElementById("group").value,
+          option: document.getElementById("option").value,
+
+          checkbox: document.getElementById("checkbox").checked,
+        };
+
+        google.script.run
+          .withSuccessHandler(function (output) {
+            document.getElementById("output").innerHTML = output;
+            document.getElementById("myForm").reset(); // reset the form
+          })
+          .withFailureHandler(function (error) {
+            alert(error.message);
+          })
+          .processForm(form);
+      }
+    </script>
+
+    <script>
+      // Get references to the select elements
+      var groupSelect = document.getElementById("group");
+      var optionalSubjectSelect = document.getElementById("option");
+
+      // Add event listener for the group select element
+      groupSelect.addEventListener("change", function () {
+        // Get the selected option value
+        var selectedGroup = groupSelect.value;
+
+        // Check the selected group and modify the optional subject select options accordingly
+        if (selectedGroup === "Science") {
+          optionalSubjectSelect.options[1].style.display = "block"; // Hide Agricultural Science
+          optionalSubjectSelect.options[2].style.display = "block"; // Show Higher Mathematics
+          optionalSubjectSelect.options[3].style.display = "none"; // Show Biology
+        } else if (selectedGroup === "Business Studies") {
+          optionalSubjectSelect.options[1].style.display = "none"; // Hide Higher Mathematics
+          optionalSubjectSelect.options[2].style.display = "none"; // Hide Biology
+          optionalSubjectSelect.options[3].style.display = "block"; // Show Agricultural Science
+        } else if (selectedGroup === "Humanities") {
+          optionalSubjectSelect.options[1].style.display = "none"; // Hide Higher Mathematics
+          optionalSubjectSelect.options[2].style.display = "none"; // Hide Biology
+          optionalSubjectSelect.options[3].style.display = "block"; // Show Agricultural Science
+        } else {
+          // Hide all options if no group is selected
+          for (var i = 1; i < optionalSubjectSelect.options.length; i++) {
+            optionalSubjectSelect.options[i].style.display = "none";
+          }
+        }
+      });
+
+      // Hide all options initially
+      for (var i = 1; i < optionalSubjectSelect.options.length; i++) {
+        optionalSubjectSelect.options[i].style.display = "none";
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
