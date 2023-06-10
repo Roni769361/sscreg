@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.05)),
+    url("image/back.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.headingbar img {
+  /* margin-top: 10px; */
+  width: 90px;
+  border-radius: 50%;
+}
+.headingbar address {
+  color: wheat;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.headingbar h1 {
+  color: white;
+  margin-left: 10px;
+  font-weight: 800;
+}
+
+.topText {
+  text-align: center;
+  color: rgb(222, 255, 102);
+}
+@media only screen and (max-width: 768px) {
+  .headingbar img {
+    /* margin-top: 10px; */
+    width: 90px;
+    border-radius: 50%;
+  }
+  .headingbar address {
+    color: wheat;
+    font-size: 10px;
+    margin-left: 10px;
+  }
+  .headingbar h1 {
+    color: white;
+    margin-left: 10px;
+    font-weight: 800;
+  }
+
+  .topText {
+    text-align: center;
+    color: rgb(222, 255, 102);
+  }
+  .topText h2 {
+    font-size: 20px !important;
+    text-align: center;
+    color: rgb(222, 255, 102);
+  }
+}
+.linkbtn {
+  background-color: rgba(240, 248, 255, 0.178);
+  color: rgba(63, 49, 253, 0.808);
+  font-size: 25px;
+  width: 300px;
+  border-radius: 30px;
+  border: none;
+}
+.linkbtn:hover {
+  background-color: rgba(27, 27, 27, 0.178);
+  color: rgba(255, 255, 255, 0.808);
+  font-size: 25px;
+  width: 300px;
+  border-radius: 30px;
+  border: none;
+}
+.button a {
+  margin: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .linkbtn {
+    background-color: rgba(240, 248, 255, 0.178);
+    color: rgba(63, 49, 253, 0.808);
+    font-size: 20px;
+    width: 300px;
+    border-radius: 30px;
+    border: none;
+  }
+  .linkbtn:hover {
+    background-color: rgba(27, 27, 27, 0.178);
+    color: rgba(255, 255, 255, 0.808);
+    font-size: 20px;
+    width: 300px;
+    border-radius: 30px;
+    border: none;
+  }
+  .button a {
+    margin: 5px;
+  }
+}
