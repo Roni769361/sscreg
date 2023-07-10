@@ -221,6 +221,7 @@ html {
   cursor: pointer;
   z-index: 1;
   transition: transform 0.3s ease-out;
+  text-align: center;
   /* background-color: yellow; */
 
   padding: 10px;
