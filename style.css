@@ -231,3 +231,72 @@ html {
 .close-button:hover {
   transform: rotate(380deg);
 }
+/* -----------notify */
+/* Keyframes for zoom-in animation */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Keyframes for zoom-out animation */
+@keyframes zoomOut {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply the initial style to the Notify div */
+.Notify {
+  /* Your existing styles here */
+}
+
+/* Add animation to the Notify div */
+.zoomInZoomOut {
+  animation: zoomInAndOut 4s infinite alternate; /* 4s duration, infinite loop, alternate direction */
+}
+
+/* Apply zoom-in and zoom-out animations to the h2 element inside Notify */
+.zoomInZoomOut h2 {
+  animation: zoomIn 2s infinite alternate, zoomOut 2s infinite alternate; /* 2s duration, infinite loop, alternate direction */
+}
+
+/* Responsive adjustments using media queries */
+@media (max-width: 768px) {
+  /* Adjust the animation duration for smaller screens */
+  .zoomInZoomOut {
+    animation-duration: 3s;
+  }
+
+  /* Apply font-size h2 in mobile view */
+  .zoomInZoomOut h2 {
+    animation-duration: 1.5s;
+    font-size: h2;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Further adjust the animation duration for even smaller screens */
+  .zoomInZoomOut {
+    animation-duration: 2s;
+  }
+
+  /* Apply font-size h3 in smaller mobile view */
+  .zoomInZoomOut h2 {
+    animation-duration: 1s;
+    font-size: h3;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Apply font-size h4 in the smallest mobile view */
+  .zoomInZoomOut h2 {
+    font-size: h4;
+  }
+}
